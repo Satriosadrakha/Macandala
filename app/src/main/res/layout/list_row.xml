@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageButton
+        android:id="@+id/listrow_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="Aksara"
+        android:layout_marginRight="4dp"/>
+
+    <ImageButton
+        android:id="@+id/listrow_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:maxHeight="50dp"
+        android:maxWidth="50dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="Sound"
+        android:src="@drawable/ic_sound"
+        android:background="@color/white"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="4dp"
+        />
+
+    <TextView
+        android:id="@+id/listrow_sunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="4dp"/>
+
+    <TextView
+        android:id="@+id/listrow_contoh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightYellow"
+        android:padding="3dp"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

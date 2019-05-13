@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LessonPlaceholderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aksara (Apa itu aksara?)" />
+
+        <Button
+            android:id="@+id/swara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesson 1 \nswara a, é, i, o, u, e, eu" />
+
+        <Button
+            android:id="@+id/kaganga1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesson 2 \nKaganga ka, ga, nga" />
+
+        <Button
+            android:id="@+id/kaganga2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesson 3 \nKaganga ca, ja, nya" />
+
+        <Button
+            android:id="@+id/kaganga3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesson 4 \nKaganga ta, da, na" />
+
+        <Button
+            android:id="@+id/kaganga4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesson 5 \nKaganga pa, ba, ma" />
+
+        <Button
+            android:id="@+id/kaganga5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesson 6 \nKaganga ya, ra, la" />
+
+        <Button
+            android:id="@+id/kaganga6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesson 7 \nKaganga wa, sa, ha" />
+
+        <Button
+            android:id="@+id/kaganga7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesson 8 \nKaganga fa, qa, va, xa, za" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

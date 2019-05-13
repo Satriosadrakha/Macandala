@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">Sprint2</string>
+
+    <!-- String for About Mandala -->
+    <string name="about_title">
+        Cirilla Fiona Elen Riannon
+    </string>
+    <string name="about_mandala">
+        Ciri, or rather Cirilla Fiona Elen Riannon, is heir to the Kingdom of Cintra, a once-independent realm that is now an annexed province of the Nilfgaardian Empire.
+            At the same time, she is heir to the throne of that empire as well, being the daughter of the current emperor, Emhyr var Emreis.
+            Before she was born she was promised to Geralt of Rivia through the ancient Law of Surprise, which bound her fate to his with powerful ties of destiny.
+            This inter-linkage of fates has enabled Geralt to save her life on many occasions and led to him taking her on as his ward, adopted daughter, and protégé.
+    </string>
+
+
+    <string name="introTitle">Aksara Sunda</string>
+    <string name="introText1">Aksara Sunda (aksara Sunda Baku) adalah sistem penulisan hasil penyesuaian Aksara Sunda Kuno yang digunakan untuk menuliskan bahasa Sunda. Aksara Sunda bersifat silabik, yakni tulisan yang dapat mewakili sebuah kata dan sukukata.</string>
+    <string name="introSubtitle1">Struktur Umum Aksara Sunda</string>
+    <string name="introText2">Aksara Sunda terdiri dari aksara swara (vokal mandiri) dan aksara ngalagena (konsonan) serta para variasinya yang menggunakan tanda vokalisasi.</string>
+    <string name="introSubtitle2">Aksara Swara</string>
+    <string name="introText3">Aksara Swara adalah tulisan yang melambangkan bunyi fonem vokal mandiri yang berperan sebagai suku kata yang bisa menempati posisi awal, tengah, maupun akhir sebuah kata. Terdapat 7 buah aksara swara, yakni:</string>
+    <string name="introSubtitle3">Aksara Ngalagena</string>
+    <string name="introText4">Aksara Ngalagena adalah tulisan yang melambangkan bunyi fonem konsonan dan berperan sebagai suku kata maupun kata yang bisa menempati posisi awal, tengah maupun akhir sebuah kata. Terdapat 23 buah aksara ngalagena, yakni:</string>
+    <string name="introSubtitle4">Rarangkén</string>
+    <string name="introText5">Rarangkén adalah penanda bunyi yang berfungsi untuk mengubah, menambah, maupun menghilangkan bunyi pada aksara Sunda. Terdapat 3 jenis rarangkén, yakni:</string>
+
+    <string-array name="swara" translateable="false">
+        <item>a</item>
+        <item>é</item>
+        <item>i</item>
+        <item>o</item>
+        <item>u</item>
+        <item>e</item>
+        <item>eu</item>
+    </string-array>
+
+    <string-array name="ngalagena">
+        <item>ka</item>
+        <item>ga</item>
+        <item>nga</item>
+        <item>ca</item>
+        <item>ja</item>
+        <item>nya</item>
+        <item>ta</item>
+        <item>da</item>
+        <item>na</item>
+        <item>pa</item>
+        <item>ba</item>
+        <item>ma</item>
+        <item>ya</item>
+        <item>ra</item>
+        <item>la</item>
+        <item>wa</item>
+        <item>sa</item>
+        <item>ha</item>
+        <item>fa</item>
+        <item>qa</item>
+        <item>va</item>
+        <item>xa</item>
+        <item>za</item>
+    </string-array>
+
+    <string-array name="aksaraLesson1">
+        <item>Di pelajaran ini, kita akan belajar 7 aksara swara, yakni "a", "é", "i", "o", "u", "e", "eu".</item>
+        <item>Di pelajaran ini, kita akan belajar 3 aksara ngalagena, yakni "Ka", "Ga", dan "Nga".</item>
+        <item>Di pelajaran ini, kita akan belajar 3 aksara ngalagena, yakni "Ca", "Ja", dan "Nya".</item>
+        <item>Di pelajaran ini, kita akan belajar 3 aksara ngalagena, yakni "Ta", "Da", dan "Na".</item>
+        <item>Di pelajaran ini, kita akan belajar 3 aksara ngalagena, yakni "Pa", "Ba", dan "Ma".</item>
+        <item>Di pelajaran ini, kita akan belajar 3 aksara ngalagena, yakni "Ya", "Ra", dan "La".</item>
+        <item>Di pelajaran ini, kita akan belajar 3 aksara ngalagena, yakni "Wa", "Sa", dan "Ha".</item>
+        <item>Di pelajaran ini, kita akan belajar 5 aksara ngalagena, yakni "Fa", "Qa", "Va", "Xa", dan "Za".</item>
+    </string-array>
+
+    <string-array name="aksaraLesson2">
+        <item>Dalam ejaan bahasa Sunda, é, e, dan eu memiliki pengucapan yang berbeda-beda.
+            \nPengucapan "é" caranya dengan menarik pipi sehingga bibir seperti tersenyum.
+            \nPengucapan "e" (pepet) sama dengan pengucapan vokal "e" (pepet) pada kata-kata Bahasa Indonesia.
+            \nPengucapan "eu" caranya dengan kepala agak didongakkan ke atas, seperti kita hendak sendawa.
+            \nCoba dengarkanlah suara pengucapannya masing-masing agar terlihat perbedaannya.</item>
+        <item>Sebenarnya, aksara Sunda Ka, Ga, dan Nga adalah bentuk vokalisasi dari konsonan "k", "g", dan "ng".
+            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "ka", "ge", dan "eng"</item>
+        <item>Sebenarnya, aksara Sunda Ca, Ja, dan Nya adalah bentuk vokalisasi dari konsonan "c", "j", dan "ny".
+            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "ce", "je", dan "nye"</item>
+        <item>Sebenarnya, aksara Sunda Ta, Da, dan Na adalah bentuk vokalisasi dari konsonan "t", "d", dan "n".
+            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "te", "de", dan "en"</item>
+        <item>Sebenarnya, aksara Sunda Pa, Ba, dan Ma adalah bentuk vokalisasi dari konsonan "p", "b", dan "m".
+            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "pe", "be", dan "em"</item>
+        <item>Sebenarnya, aksara Sunda Ya, Ra, dan La adalah bentuk vokalisasi dari konsonan "y", "r", dan "l".
+            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "ye", "er", dan "el"</item>
+        <item>Sebenarnya, aksara Sunda Wa, Sa, dan Ha adalah bentuk vokalisasi dari konsonan "w", "s", dan "h".
+            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "we", "es", dan "ha"</item>
+        <item>Sebenarnya, aksara Sunda Fa, Qa, Va, Xa, dan Za adalah bentuk vokalisasi dari konsonan "f", "q", "v", "x", dan "z".
+            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "ef", "qi", "ve", "ex", dan "zet".
+            \nLima aksara Sunda tersebut merupakan aksara Ngalagena dari bunyi serapan.
+            \nLambang aksara fa dan va merupakan varian lambang aksara pa; lambang aksara qa dan xa adalah varian lambang aksara ka; lambang aksara za adalah varian lambang aksara ja.</item>
+    </string-array>
+
+    <string-array name="shortdesc">
+        <item>"a" seperti di "aku"</item>
+        <item>"é" seperti di "es"</item>
+        <item>"i" seperti di "ikan"</item>
+        <item>"o" seperti di "orang"</item>
+        <item>"u" seperti di "ujian"</item>
+        <item>"e" seperti di "entah"</item>
+        <item>Bahasa Indonesia tidak mengenal vokal "eu"</item>
+        <item>"ka" seperti di "kasihan"</item>
+        <item>"ga" seperti di "ganti"</item>
+        <item>"nga" seperti di "menganga"</item>
+        <item>"ca" seperti di "cacah"</item>
+        <item>"ja" seperti di "jadi"</item>
+        <item>"nya" seperti di "nyala"</item>
+        <item>"ta" seperti di "tapi"</item>
+        <item>"da" seperti di "dari"</item>
+        <item>"na" seperti di "napi"</item>
+        <item>"pa" seperti di "pasti"</item>
+        <item>"ba" seperti di "baring"</item>
+        <item>"ma" seperti di "makan"</item>
+        <item>"ya" seperti di "ya"</item>
+        <item>"ra" seperti di "ralat"</item>
+        <item>"la" seperti di "lawan"</item>
+        <item>"wa" seperti di "wa"</item>
+        <item>"sa" seperti di "sapi"</item>
+        <item>"ha" seperti di "hasil"</item>
+        <item>"fa" seperti di "fakir"</item>
+        <item>"qa" seperti di "qa"</item>
+        <item>"va" seperti di "vandal"</item>
+        <item>"xa" seperti di "xa"</item>
+        <item>"za" seperti di "za"</item>
+    </string-array>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+</resources>
