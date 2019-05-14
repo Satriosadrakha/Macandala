@@ -1,11 +1,16 @@
 package com.example.sprint2;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sprint2.DatabaseHelper.DatabaseHelper;
 import com.example.sprint2.Model.Character;
@@ -186,15 +191,34 @@ public class AksaraLessonActivity extends AppCompatActivity {
         String[] from = {"listview_image", "listview_title", "listview_description"};
         int[] to = {R.id.listrow_image, R.id.listrow_sunda, R.id.listrow_contoh};
 
-//        ImageButton sound = (ImageButton) this.findViewById(R.id.listrow_sound);
-//        sound.setOnClickListener(new View.OnClickListener(){
+        final MediaPlayer mp = (MediaPlayer) MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("a","raw", getPackageName()));
+
+//        ImageButton sound = (ImageButton)findViewById(R.id.listrow_sound);
+//        Log.d("SOUND", String.valueOf( sound ) );
+//        sound.setOnClickListener(new View.OnClickListener() {
 //            public void onClick(View v) {
-//                final MediaPlayer mp = (MediaPlayer) MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("a","raw", getPackageName()));
 //                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 //                    @Override public void onCompletion(MediaPlayer mp) {
 //                        mp.reset();
 //                        mp.release();
-//                        mp=null;
+//                        mp = null;
+//                    }
+//                });
+//                mp.start();
+//            }
+//        });
+
+
+
+//        sound.setOnClickListener(new View.OnClickListener(){
+//            public void onClick(View v) {
+//
+//
+//                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+//                    @Override public void onCompletion(MediaPlayer mp) {
+//                        mp.reset();
+//                        mp.release();
+//                        mp = null;
 //                    }
 //                });
 //                mp.start();
@@ -204,5 +228,22 @@ public class AksaraLessonActivity extends AppCompatActivity {
         SimpleAdapter simpleAdapter = new SimpleAdapter(getBaseContext(), aList, R.layout.list_row, from, to);
         ListView androidListView = (ListView) findViewById(R.id.list_row);
         androidListView.setAdapter(simpleAdapter);
+    }
+
+//    @Override
+//    protected void onListItemClick(ListView l, View v, int position, long id) {
+//        String item = (String) getListAdapter().getItem(position);
+//        Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
+//    }
+
+    protected void onListItemClick(ListView listrow_sound, View v, int position, long id) {
+
+//        String item = (String) getListAdapter().getItem(position);
+//        Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
+        //        super.onListItemClick(list, view, position, id);
+//        String fname = String.valueOf(position + 1);
+        int resID=getResources().getIdentifier("a", "raw", getPackageName());
+        MediaPlayer mediaPlayer=MediaPlayer.create(this,resID);
+        mediaPlayer.start();
     }
 }

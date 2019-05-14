@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
         // start activity after some amount of time
         new Handler().postDelayed(() ->
                 startActivity(new Intent(getApplicationContext()
-                        ,StartActivity.class)), Long.parseLong(String.valueOf(intervalsplash)));
+                        ,MainActivity.class)), Long.parseLong(String.valueOf(intervalsplash)));
         //new Handler().postDelayed(() ->
         //startActivity(new Intent(getApplicationContext(),
         //MainMenu.class)), Long.parseLong(String.valueOf(intervalsplash)));

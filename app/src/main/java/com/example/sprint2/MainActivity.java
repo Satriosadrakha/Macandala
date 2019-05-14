@@ -11,11 +11,19 @@ import com.example.sprint2.Model.Character;
 
 public class MainActivity extends AppCompatActivity {
     DatabaseHelper db;
-
+    Button StartButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        StartButton = (Button) findViewById(R.id.startButton);
+        StartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MenuActivity.class));
+            }
+        });
 
         db = new DatabaseHelper(this);
 
@@ -154,15 +162,15 @@ public class MainActivity extends AppCompatActivity {
         // Don't forget to close database connection
         db.closeDB();
 
-        Button start = (Button) findViewById(R.id.start);
-        start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), LessonPlaceholderActivity.class);
-                //intent.putExtra("CATEGORY_ID", 1);
-                startActivity(intent);
-//                view.getContext().startActivity(intent);
-            }
-        });
+//        Button start = (Button) findViewById(R.id.start);
+//        start.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getBaseContext(), LessonPlaceholderActivity.class);
+//                //intent.putExtra("CATEGORY_ID", 1);
+//                startActivity(intent);
+////                view.getContext().startActivity(intent);
+//            }
+//        });
     }
 }

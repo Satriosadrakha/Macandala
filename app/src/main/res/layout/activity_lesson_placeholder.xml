@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,62 +10,156 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/palamacan" />
 
         <Button
             android:id="@+id/intro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Aksara (Apa itu aksara?)" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Aksara (Apa itu Aksara?)"
+            android:textSize="15sp"
+            android:textAllCaps="false"/>
 
         <Button
             android:id="@+id/swara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lesson 1 \nswara a, é, i, o, u, e, eu" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Lesson 1 \nswara a, é, i, o, u, e, eu"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/kaganga1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lesson 2 \nKaganga ka, ga, nga" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Lesson 2 \nKaganga ka, ga, nga"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/kaganga2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lesson 3 \nKaganga ca, ja, nya" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Lesson 3 \nKaganga ca, ja, nya"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/kaganga3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lesson 4 \nKaganga ta, da, na" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Lesson 4 \nKaganga ta, da, na"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/kaganga4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lesson 5 \nKaganga pa, ba, ma" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Lesson 5 \nKaganga pa, ba, ma"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/kaganga5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lesson 6 \nKaganga ya, ra, la" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Lesson 6 \nKaganga ya, ra, la"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/kaganga6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lesson 7 \nKaganga wa, sa, ha" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Lesson 7 \nKaganga wa, sa, ha"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/kaganga7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lesson 8 \nKaganga fa, qa, va, xa, za" />
+            android:layout_gravity="center"
+            android:background="@drawable/aksara_menu"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="Lesson 8 \nKaganga fa, qa, va, xa, za"
+            android:textSize="15sp"
+            android:textAllCaps="false" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
