@@ -1,8 +1,19 @@
 package com.example.sprint2.Model;
 
 public class Category {
-    int id;
-    String name;
+    public static final int BASIC11 = 1;
+    public static final int BASIC12 = 2;
+    public static final int BASIC21 = 3;
+    public static final int BASIC22 = 4;
+    public static final int HEWAN1 = 5;
+    public static final int HEWAN2 = 6;
+    public static final int WARNA1 = 7;
+    public static final int WARNA2 = 8;
+    public static final int ANGKA1 = 9;
+    public static final int ANGKA2 = 10;
+
+    private int id;
+    private String name;
 
     // constructors
     public Category() {
@@ -35,4 +46,8 @@ public class Category {
         return this.name;
     }
 
+    @Override
+    public String toString(){
+        return getNama();
+    }
 }

@@ -10,6 +10,9 @@ import android.util.Log;
 import com.example.sprint2.Model.Category;
 import com.example.sprint2.Model.Character;
 import com.example.sprint2.Model.Word;
+import com.example.sprint2.Model.Question;
+import com.example.sprint2.QuizContract.*;
+
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,13 +29,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // Database Name
-    private static final String DATABASE_NAME = "mandala";
+    private static final String DATABASE_NAME = "mandala.db";
+
+    private static DatabaseHelper instance;
+
+    private SQLiteDatabase db;
 
     // Table Names
     private static final String TABLE_CHARACTER = "characters";
     private static final String TABLE_WORD = "words";
     private static final String TABLE_WORD_CHARACTER = "wordcharacters";
-    private static final String TABLE_CATEGORY = "categories";
+    //private static final String TABLE_CATEGORY = "categories";
     private static final String TABLE_LESSON = "lessons";
     //private static final String TABLE_TODO_TAG = "todo_tags";
 
@@ -55,7 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_CHARACTER_ID = "character_id";
 
     // categories Table - column names
-    private static final String KEY_CATEGORY_NAME = "name";
+    //private static final String KEY_CATEGORY_NAME = "name";
 
     // lessons Table - column names
     private static final String KEY_CATEGORY_ID = "category_id";
@@ -83,8 +90,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + " INTEGER," + KEY_WORD_ID + " INTEGER," + KEY_CHARACTER_ID + " INTEGER" + ")";
 
     // Categories table create statement
-    private static final String CREATE_TABLE_CATEGORY = "CREATE TABLE " + TABLE_CATEGORY
-            + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_CATEGORY_NAME + " TEXT" + ")";
+    // static final String CREATE_TABLE_CATEGORY = "CREATE TABLE " + TABLE_CATEGORY
+    //       + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_CATEGORY_NAME + " TEXT" + ")";
 
     // Lessons table create statement
     private static final String CREATE_TABLE_LESSON = "CREATE TABLE " + TABLE_LESSON
@@ -96,9 +103,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + KEY_TODO_ID + " INTEGER," + KEY_TAG_ID + " INTEGER,"
             + KEY_CREATED_AT + " DATETIME" + ")";
     */
+
+    final String SQL_CREATE_CATEGORIES_TABLE = "CREATE TABLE " +
+            CategoriesTable.TABLE_NAME  + "(" +
+            CategoriesTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            CategoriesTable.COLUMN_NAME + " TEXT" +
+            ")";
+
+    final String SQL_CREATE_QUESTION_TABLE = "CREATE TABLE " +
+            QuestionTable.TABLE_NAME + " ( " +
+            QuestionTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            QuestionTable.COLUMN_QUESTION + " TEXT," +
+            QuestionTable.COLUMN_OPTION1 + " TEXT," +
+            QuestionTable.COLUMN_OPTION2 + " TEXT," +
+            QuestionTable.COLUMN_OPTION3 + " TEXT," +
+            QuestionTable.COLUMN_OPTION4 + " TEXT," +
+            QuestionTable.COLUMN_ANSWER_NR + " INTEGER," +
+            QuestionTable.COLUMN_CATEGORY_ID + " INTEGER," +
+            "FOREIGN KEY(" + QuestionTable.COLUMN_CATEGORY_ID + ") REFERENCES " +
+            CategoriesTable.TABLE_NAME + "(" + CategoriesTable._ID + ")" + "ON DELETE CASCADE" +
+            ")";
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         //SQLiteDatabase db = this.getWritableDatabase();
+    }
+
+    public static synchronized DatabaseHelper getInstance(Context context){
+        if(instance == null){
+            instance = new DatabaseHelper( context.getApplicationContext() );
+        }
+        return instance;
     }
 
     @Override
@@ -107,8 +142,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_WORD);
         db.execSQL(CREATE_TABLE_WORD_CHARACTER);
 
-        db.execSQL(CREATE_TABLE_CATEGORY);
+        //db.execSQL(CREATE_TABLE_CATEGORY);
         db.execSQL(CREATE_TABLE_LESSON);
+
+        this.db = db;
+
+        db.execSQL( SQL_CREATE_CATEGORIES_TABLE );
+        db.execSQL( SQL_CREATE_QUESTION_TABLE );
+        fillCategoriesTable();
+        fillQuestionTable();
     }
 
     @Override
@@ -117,9 +159,187 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_WORD);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_WORD_CHARACTER);
 
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CATEGORY);
+        //db.execSQL("DROP TABLE IF EXISTS " + TABLE_CATEGORY);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_LESSON);
+
+        db.execSQL("DROP TABLE IF EXISTS " + CategoriesTable.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + QuestionTable.TABLE_NAME);
         onCreate(db);
+    }
+
+    @Override
+    public void onConfigure(SQLiteDatabase db) {
+        super.onConfigure( db );
+        db.setForeignKeyConstraintsEnabled( true );
+    }
+
+    private void fillCategoriesTable(){
+//        Category c3 = new Category( "Hewan" );
+//        addCategory( c3 );
+
+        addCategory( new Category( "Basic11" ) );
+        addCategory( new Category( "Basic12" ) );
+        addCategory( new Category( "Basic21" ) );
+        addCategory( new Category( "Basic22" ) );
+        addCategory( new Category( "Hewan1" ) );
+        addCategory( new Category( "Hewan2" ) );
+        addCategory( new Category( "Warna1" ) );
+        addCategory( new Category( "Warna2" ) );
+        addCategory( new Category( "Angka1" ) );
+        addCategory( new Category( "Angka2" ) );
+    }
+
+    private void addCategory(Category category){
+        ContentValues cv = new ContentValues(  );
+        cv.put( CategoriesTable.COLUMN_NAME, category.getNama() );
+        db.insert( CategoriesTable.TABLE_NAME, null, cv );
+    }
+
+    private void fillQuestionTable(){
+        addQuestion( new Question(
+                "BASIC 1 LESSON 1: A is correct",
+                "A", "B", "C", "D",
+                1,
+                1  ) );
+
+        addQuestion( new Question(
+                "BASIC 1 LESSON 1: C is correct",
+                "A", "B", "C", "D",
+                3,
+                1  ) );
+
+        addQuestion( new Question(
+                "BASIC 1 LESSON 2: B is correct",
+                "A", "B", "C", "D",
+                2,
+                2  ) );
+
+        addQuestion( new Question(
+                "BASIC 1 LESSON 2: D is correct",
+                "A", "B", "C", "D",
+                4,
+                2  ) );
+
+        addQuestion( new Question(
+                "BASIC 2 LESSON 1: A is correct",
+                "A", "B", "C", "D",
+                1,
+                3  ) );
+
+        addQuestion( new Question(
+                "BASIC 2 LESSON 2: A is correct",
+                "A", "B", "C", "D",
+                1,
+                4  ) );
+
+//        Question q1 = new Question( "BASIC 1: A is correct",
+//                "A", "B", "C",
+//                1, Category.BASIC1  );
+//        addQuestion( q1 );
+//        Question q2 = new Question( "Non Existing: B is correct",
+//                "A", "B", "C",
+//                2, 4  );
+//        addQuestion( q2 );
+//        Question q3 = new Question( "BASIC 2: B is correct",
+//                "A", "B", "C",
+//                2, Category.BASIC2  );
+//        addQuestion( q3 );
+//        Question q4 = new Question( "HEWAN: C is correct",
+//                "A", "B", "C",
+//                3, Category.HEWAN  );
+//        addQuestion( q4 );
+//        Question q5 = new Question( "Should be BASIC 1: A is correct",
+//                "A", "B", "C",
+//                1, 1  );
+//        addQuestion( q5 );
+    }
+
+    private void addQuestion(Question question){
+        ContentValues cv = new ContentValues(  );
+        cv.put( QuestionTable.COLUMN_QUESTION, question.getQuestion() );
+        cv.put( QuestionTable.COLUMN_OPTION1, question.getOption1() );
+        cv.put( QuestionTable.COLUMN_OPTION2, question.getOption2() );
+        cv.put( QuestionTable.COLUMN_OPTION3, question.getOption3() );
+        cv.put( QuestionTable.COLUMN_OPTION4, question.getOption4() );
+        cv.put( QuestionTable.COLUMN_ANSWER_NR, question.getAnswerNr() );
+        cv.put( QuestionTable.COLUMN_CATEGORY_ID, question.getCategoryID() );
+        db.insert(QuestionTable.TABLE_NAME, null, cv);
+    }
+
+    public List<Category> getAllCategories(){
+        List<Category> categoryList = new ArrayList<>();
+        db = getReadableDatabase();
+        Cursor c = db.rawQuery( "SELECT * FROM " + CategoriesTable.TABLE_NAME, null );
+
+        if(c.moveToFirst()){
+            do{
+                Category category = new Category(  );
+                category.setId( c.getInt( c.getColumnIndex( CategoriesTable._ID ) ) );
+                category.setNama( c.getString( c.getColumnIndex( CategoriesTable.COLUMN_NAME ) ) );
+                categoryList.add(category);
+            } while(c.moveToNext());
+        }
+        c.close();
+        return categoryList;
+    }
+
+    public List<Question> getAllQuestions(){
+        List<Question> questionList = new ArrayList<>(  );
+        db = getReadableDatabase();
+        Cursor c = db.rawQuery( "SELECT * FROM " + QuestionTable.TABLE_NAME, null );
+
+        if(c.moveToFirst()){
+            do{
+                Question question = new Question(  );
+                question.setId( c.getInt( c.getColumnIndex( QuestionTable._ID ) ) );
+                question.setQuestion( c.getString( c.getColumnIndex( QuestionTable.COLUMN_QUESTION ) ) );
+                question.setOption1( c.getString( c.getColumnIndex( QuestionTable.COLUMN_OPTION1 ) ) );
+                question.setOption2( c.getString( c.getColumnIndex( QuestionTable.COLUMN_OPTION2 ) ) );
+                question.setOption3( c.getString( c.getColumnIndex( QuestionTable.COLUMN_OPTION3 ) ) );
+                question.setOption4( c.getString( c.getColumnIndex( QuestionTable.COLUMN_OPTION4 ) ) );
+                question.setAnswerNr( c.getInt( c.getColumnIndex( QuestionTable.COLUMN_ANSWER_NR ) ) );
+                question.setCategoryID( c.getInt( c.getColumnIndex( QuestionTable.COLUMN_CATEGORY_ID) ) );
+                questionList.add(question);
+            } while(c.moveToNext());
+        }
+        c.close();
+        return questionList;
+    }
+
+    public ArrayList<Question> getQuestions(int categoryID){
+        ArrayList<Question> questionList = new ArrayList<>(  );
+        db = getReadableDatabase();
+
+        String selection = QuestionTable.COLUMN_CATEGORY_ID + " = ? ";
+        String[] selectionArgs = new String[]{
+                String.valueOf( categoryID )
+        };
+
+        Cursor c = db.query(
+                QuestionTable.TABLE_NAME,
+                null,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null);
+
+        if(c.moveToFirst()){
+            do{
+                Question question = new Question(  );
+                question.setId( c.getInt( c.getColumnIndex( QuestionTable._ID ) ) );
+                question.setQuestion( c.getString( c.getColumnIndex( QuestionTable.COLUMN_QUESTION ) ) );
+                question.setOption1( c.getString( c.getColumnIndex( QuestionTable.COLUMN_OPTION1 ) ) );
+                question.setOption2( c.getString( c.getColumnIndex( QuestionTable.COLUMN_OPTION2 ) ) );
+                question.setOption3( c.getString( c.getColumnIndex( QuestionTable.COLUMN_OPTION3 ) ) );
+                question.setOption4( c.getString( c.getColumnIndex( QuestionTable.COLUMN_OPTION4 ) ) );
+                question.setAnswerNr( c.getInt( c.getColumnIndex( QuestionTable.COLUMN_ANSWER_NR ) ) );
+                question.setCategoryID( c.getInt( c.getColumnIndex( QuestionTable.COLUMN_CATEGORY_ID) ) );
+                questionList.add(question);
+            } while(c.moveToNext());
+        }
+        c.close();
+        return questionList;
     }
 
     // --------------------------------todo table method --------------------------------------------//
@@ -402,44 +622,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[] { String.valueOf(id) });
     }
 
-    public long createCategory(Category category) {
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(KEY_CATEGORY_NAME, category.getNama());
-        //values.put(KEY_CREATED_AT, getDateTime());
-
-        // insert row
-        long category_id = db.insert(TABLE_CATEGORY, null, values);
-
-        return category_id;
-    }
+//    public long createCategory(Category category) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//
+//        ContentValues values = new ContentValues();
+//        values.put(KEY_CATEGORY_NAME, category.getNama());
+//        //values.put(KEY_CREATED_AT, getDateTime());
+//
+//        // insert row
+//        long category_id = db.insert(TABLE_CATEGORY, null, values);
+//
+//        return category_id;
+//    }
 
     /**
      * getting all tags
      * */
-    public List<Category> getAllCategories() {
-        List<Category> categories = new ArrayList<Category>();
-        String selectQuery = "SELECT * FROM " + TABLE_CATEGORY;
-
-        Log.e(LOG, selectQuery);
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.rawQuery(selectQuery, null);
-
-        // looping through all rows and adding to list
-        if (c.moveToFirst()) {
-            do {
-                Category t = new Category();
-                t.setId(c.getInt((c.getColumnIndex(KEY_ID))));
-                t.setNama(c.getString(c.getColumnIndex(KEY_CATEGORY_NAME)));
-
-                // adding to tags list
-                categories.add(t);
-            } while (c.moveToNext());
-        }
-        return categories;
-    }
+//    public List<Category> getAllCategories() {
+//        List<Category> categories = new ArrayList<Category>();
+//        String selectQuery = "SELECT * FROM " + TABLE_CATEGORY;
+//
+//        Log.e(LOG, selectQuery);
+//
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        Cursor c = db.rawQuery(selectQuery, null);
+//
+//        // looping through all rows and adding to list
+//        if (c.moveToFirst()) {
+//            do {
+//                Category t = new Category();
+//                t.setId(c.getInt((c.getColumnIndex(KEY_ID))));
+//                t.setNama(c.getString(c.getColumnIndex(KEY_CATEGORY_NAME)));
+//
+//                // adding to tags list
+//                categories.add(t);
+//            } while (c.moveToNext());
+//        }
+//        return categories;
+//    }
 
     // closing database
     public void closeDB() {

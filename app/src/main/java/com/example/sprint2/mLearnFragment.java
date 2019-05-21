@@ -54,6 +54,12 @@ public class mLearnFragment extends Fragment {
             Intent intent = new Intent(getActivity(), LessonPlaceholderActivity.class);
             startActivity(intent);
         });
+
+        final View basic1 = view.findViewById(R.id.basic_1);
+        basic1.setOnClickListener((View v)->{
+            Intent intent = new Intent(getActivity(), LessonActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override
