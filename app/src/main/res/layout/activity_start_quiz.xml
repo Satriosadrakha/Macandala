@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,11 +9,13 @@
     tools:context=".StartQuizActivity">
 
     <TextView
+        android:id="@+id/start_quiz_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Let's Start The Quiz"
+        android:gravity="center"
+        android:text="Mari kita mulai"
         android:textColor="@android:color/black"
         android:textSize="35sp" />
 
@@ -23,7 +26,7 @@
         android:layout_above="@id/button_start_quiz"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
-        android:text="Highscore: 0"
+        android:text="Skor tertinggi: 0"
         android:textSize="20sp" />
 
     <Button
@@ -31,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Start Quiz" />
+        android:text="Mulai" />
 
     <Spinner
         android:id="@+id/spinner_category"
@@ -40,5 +43,6 @@
         android:layout_below="@id/button_start_quiz"
         android:layout_alignStart="@id/button_start_quiz"
         android:layout_alignLeft="@id/button_start_quiz"
-        android:layout_marginTop="16dp"></Spinner>
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"></Spinner>
 </RelativeLayout>

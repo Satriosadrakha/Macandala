@@ -16,186 +16,429 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="5dp">
+            android:orientation="vertical">
 
-            <!--Left Side-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_gravity="start"
+                    android:text="@string/btn_logout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:padding="10dp"/>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:id="@+id/aboutMandala"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Tentang\nKami"
+                    android:background="@drawable/bottom_left_curved"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:padding="10dp"
+                    android:layout_marginBottom="4dp"
+                    />
+            </LinearLayout>
 
-                <!--Aksara-->
+
+            <ImageView
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:background="@drawable/main_logo_big"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/aksara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/curved_button">
+
                 <LinearLayout
-                    android:id="@+id/aksara"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/main_menu_button"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginEnd="2dp"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_marginRight="2dp">
+                    android:padding="5dp"
+                    android:layout_marginHorizontal="20dp">
 
                     <ImageView
                         android:layout_width="76dp"
                         android:layout_height="64dp"
-                        android:src="@drawable/palamacanbw"/>
+                        android:src="@drawable/aksara"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Aksara"
-                        android:textSize="20sp"
+                        android:text="Aksara\nSunda"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
                         android:textColor="#000000"/>
                 </LinearLayout>
-                <!--Sasatoan-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/curved_button"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginBottom="4dp"-->
+                    <!--android:padding="5dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="76dp"-->
+                        <!--android:layout_height="64dp"-->
+                        <!--android:background="@drawable/zgambar2"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Aksara\nSunda Kuno"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textSize="14sp"-->
+                        <!--android:textColor="#000000"/>-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/main_menu_button"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginEnd="2dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:layout_marginRight="2dp">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="76dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/starbw"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/basic_1"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Basic 2"
-                        android:textSize="20sp"
-                        android:textColor="#000000"/>
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/curved_button"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_marginRight="4dp">
+
+                        <ImageView
+                            android:layout_width="76dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/latihan_1"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dasar 1"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10dp"/>
+                    </LinearLayout>
                 </LinearLayout>
-                <!--Basic 2-->
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/main_menu_button"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginEnd="2dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:layout_marginRight="2dp">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="76dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/color"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/basic_2"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Warna"
-                        android:textSize="20sp"
-                        android:textColor="#000000"/>
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/curved_button"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_marginRight="4dp">
+
+                        <ImageView
+                            android:layout_width="76dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/latihan_2"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dasar 2"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10dp"/>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
-            <!--Right Side-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-                <Button
-                    android:id="@+id/aboutMandala"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:text="Tentang Kami"
-                    android:background="@drawable/main_menu_button"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginLeft="2dp" />
-                <LinearLayout
-                    android:id="@+id/basic_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/main_menu_button"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginStart="2dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:layout_marginLeft="2dp">
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginHorizontal="20dp">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="92dp"
-                        android:src="@drawable/star"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/hewan"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Basic 1"
-                        android:textSize="20sp"
-                        android:textColor="#000000"/>
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/curved_button"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/binatang"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hewan"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10dp"/>
+                    </LinearLayout>
                 </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/games"
-                    android:layout_width="match_parent"
+                <Space
+                    android:layout_width="20dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/main_menu_button"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginStart="2dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:layout_marginLeft="2dp">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/animalbw"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hewan"
-                        android:textSize="20sp"
-                        android:textColor="#000000"/>
-                </LinearLayout>
+                    />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/main_menu_button"
-                    android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginStart="2dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:layout_marginLeft="2dp">
+                    android:layout_weight="1">
 
-                    <ImageView
-                        android:layout_width="68dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/test"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/warna"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Test"
-                        android:textSize="20sp"
-                        android:textColor="#000000"/>
+                        android:background="@drawable/curved_button"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:padding="5dp"
+                        android:layout_marginRight="4dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/warna"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Warna"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_marginBottom="10dp"/>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_margin="5dp">-->
+
+            <!--&lt;!&ndash;Left Side&ndash;&gt;-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_weight="1">-->
+
+                <!--&lt;!&ndash;Aksara&ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/aksara"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/main_menu_button"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginBottom="4dp"-->
+                    <!--android:layout_marginEnd="2dp"-->
+                    <!--android:paddingTop="20dp"-->
+                    <!--android:paddingBottom="20dp"-->
+                    <!--android:clickable="true"-->
+                    <!--android:focusable="true"-->
+                    <!--android:layout_marginRight="2dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="76dp"-->
+                        <!--android:layout_height="64dp"-->
+                        <!--android:src="@drawable/palamacanbw"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Aksara"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:textColor="#000000"/>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;Sasatoan&ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/basic_2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/main_menu_button"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginBottom="4dp"-->
+                    <!--android:layout_marginEnd="2dp"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:paddingBottom="10dp"-->
+                    <!--android:layout_marginRight="2dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="76dp"-->
+                        <!--android:layout_height="64dp"-->
+                        <!--android:src="@drawable/starbw"-->
+                        <!--/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Basic 2"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:textColor="#000000"/>-->
+                <!--</LinearLayout>-->
+                <!--&lt;!&ndash;Basic 2&ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/warna"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/main_menu_button"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginBottom="4dp"-->
+                    <!--android:layout_marginEnd="2dp"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:paddingBottom="10dp"-->
+                    <!--android:layout_marginRight="2dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="76dp"-->
+                        <!--android:layout_height="64dp"-->
+                        <!--android:src="@drawable/color"-->
+                        <!--/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Warna"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:textColor="#000000"/>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--&lt;!&ndash;Right Side&ndash;&gt;-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_weight="1">-->
+                <!--<Button-->
+                    <!--android:id="@+id/aboutMandala"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:text="Tentang Kami"-->
+                    <!--android:background="@drawable/main_menu_button"-->
+                    <!--android:layout_marginBottom="4dp"-->
+                    <!--android:layout_marginStart="2dp"-->
+                    <!--android:layout_marginLeft="2dp" />-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/basic_1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/main_menu_button"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginBottom="4dp"-->
+                    <!--android:layout_marginStart="2dp"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:paddingBottom="10dp"-->
+                    <!--android:layout_marginLeft="2dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="80dp"-->
+                        <!--android:layout_height="92dp"-->
+                        <!--android:src="@drawable/star"-->
+                        <!--/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Basic 1"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:textColor="#000000"/>-->
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/hewan"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/main_menu_button"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_marginBottom="4dp"-->
+                    <!--android:layout_marginStart="2dp"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:paddingBottom="10dp"-->
+                    <!--android:layout_marginLeft="2dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="100dp"-->
+                        <!--android:layout_height="80dp"-->
+                        <!--android:src="@drawable/animalbw"-->
+                        <!--/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Hewan"-->
+                        <!--android:textSize="20sp"-->
+                        <!--android:textColor="#000000"/>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
     </ScrollView>
 
 </FrameLayout>

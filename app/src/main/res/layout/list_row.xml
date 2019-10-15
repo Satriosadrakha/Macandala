@@ -47,7 +47,7 @@
         android:id="@+id/listrow_contoh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightYellow"
+        android:background="@color/colorPrimary"
         android:padding="3dp"
         android:layout_gravity="center_vertical"/>
 

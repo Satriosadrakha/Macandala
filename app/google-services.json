@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "155101865012",
+    "firebase_url": "https://mandala-8023e.firebaseio.com",
+    "project_id": "mandala-8023e",
+    "storage_bucket": "mandala-8023e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155101865012:android:2704818a0e6d7781",
+        "android_client_info": {
+          "package_name": "com.example.sprint2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155101865012-ujcp3ia4qm4legtgu1os940rub1o4q29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjqiif1Sc-WGZpPnrG3Oannvsq6JAJ2X4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155101865012-ujcp3ia4qm4legtgu1os940rub1o4q29.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

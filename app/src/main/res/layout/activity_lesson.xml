@@ -12,6 +12,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/tips"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -27,21 +28,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Learning Tips" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
-
-            <Button
-                android:id="@+id/tips"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/play_button" />
+                android:text="Tips Belajar"
+                android:textSize="24sp"/>
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lesson1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -57,32 +50,48 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Pelajaran 1" />
+                android:id="@+id/title1"
+                android:textSize="24sp"/>
 
             <TextView
+                android:id="@+id/subTitle1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Belum dipelajari" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Blablablabla" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
-
-            <Button
-                android:id="@+id/lesson1"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/play_button" />
+                android:text=""
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/lesson2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/aksara_menu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/title2"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/subTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textSize="18sp"/>
+
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"

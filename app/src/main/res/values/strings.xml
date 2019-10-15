@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sprint2</string>
+    <string name="app_name">Mandala_API</string>
 
     <!-- String for About Mandala -->
     <string name="about_title">
@@ -7,12 +7,13 @@
     </string>
     <string name="about_mandala">
         "\nPerkenalkan kami dari tim pengembangan Aplikasi Mandala."
-        "\n\nMandala merupakan aplikasi pengajaran bahasa sunda."
-        "Kamu bisa belajar banyak hal tentang bahasa sunda mulai dari aksara sunda, "
-        "kata sehari-hari dalam bahasa sunda, dan masih banyak lagi."
-        "Kamu juga bisa bermain games yang bakal membantu kamu dalam mempelajari bahasa sunda."
-        "\n\nMandala juga punya figur yang lucu loh, namanya Macan Dala. Bersama Macan Dala, yuk kita belajar bahasa sunda!"
-        "\n\n\nTim Pengembang\nAdnan J. Y.\nSatrio S. A\nM. Jordiansya\nM. Ihza T.\nBeryl C. H."
+        "\n\nMandala merupakan aplikasi pengajaran bahasa Sunda."
+        "Kamu bisa belajar banyak hal tentang bahasa Sunda mulai dari aksara Sunda, "
+        "kata sehari-hari dalam bahasa Sunda, dan masih banyak lagi."
+        "Kamu juga bisa bermain games yang bakal membantu kamu dalam mempelajari bahasa Sunda."
+        "\n\nMandala juga punya figur yang lucu loh, namanya Macan Dala. Bersama Macan Dala, yuk kita belajar bahasa Sunda!"
+        "\n\n\nTim Pengembang:\nAdnan J. Y.\nSatrio S. A.\nM. Jordiansyah\nM. Ihza T.\nBeryl C. H."
+        "\n\nDosen Pembimbing:\nErick Paulus"
     </string>
     <string name="action_settings">Settings</string>
     <string name="text_home">Home Fragment</string>
@@ -23,19 +24,84 @@
     <string name="menu_search">Search</string>
     <string name="menu_notifications">Notifications</string>
 
-
     <string name="introTitle">Aksara Sunda</string>
-    <string name="introText1">Aksara Sunda (aksara Sunda Baku) adalah sistem penulisan hasil penyesuaian Aksara Sunda Kuno yang digunakan untuk menuliskan bahasa Sunda. Aksara Sunda bersifat silabik, yakni tulisan yang dapat mewakili sebuah kata dan sukukata.</string>
+    <string name="introText1">
+        Aksara Sunda adalah sejumlah bentuk ortografi hasil kreativitas orang Sunda yang memiliki sistem penulisan untuk merekam suatu bahasa, di antaranya bahasa Sunda.
+    \nAksara yang ditampilkan pada aplikasi ini merupakan aksara Sunda hasil standarisasi para ahli berdasarkan sejumlah aksara pada prasasti dan naskah Sunda Kuno untuk didaftarkan ke Unicode.
+    \nLembaga konsorsium internasional itu membantu aksara Sunda supaya bisa diakses di setiap platform komputer.
+    \nPada April 2008, Unicode mempublikasikan pada laman websitenya bahwa aksara Sunda sudah sejajar dengan aksara lain di seluruh dunia dan sudah bisa digunakan pada setiap platform komputer.
+    \nAksara Sunda bersifat silabik, yakni tulisan yang dapat mewakili sebuah kata dan suku kata.</string>
     <string name="introSubtitle1">Struktur Umum Aksara Sunda</string>
-    <string name="introText2">Aksara Sunda terdiri dari aksara swara (vokal mandiri) dan aksara ngalagena (konsonan) serta para variasinya yang menggunakan tanda vokalisasi.</string>
+    <string name="introText2">
+    Aksara Sunda terdiri dari aksara swara (vokal mandiri), ngalagena (konsonan), tanda rarangkén (vokalisasi/harkat), dan angka.
+    </string>
     <string name="introSubtitle2">Aksara Swara</string>
-    <string name="introText3">Aksara Swara adalah tulisan yang melambangkan bunyi fonem vokal mandiri yang berperan sebagai suku kata yang bisa menempati posisi awal, tengah, maupun akhir sebuah kata. Terdapat 7 buah aksara swara, yakni:</string>
+    <string name="introText3">
+        Aksara swara adalah sistem ortografi yang melambangkan bunyi fonem vokal mandiri yang berperan sebagai suku kata yang bisa menempati posisi awal, tengah, maupun akhir sebuah kata.
+        \nTerdapat 7 buah aksara swara, yakni:
+    </string>
     <string name="introSubtitle3">Aksara Ngalagena</string>
-    <string name="introText4">Aksara Ngalagena adalah tulisan yang melambangkan bunyi fonem konsonan dan berperan sebagai suku kata maupun kata yang bisa menempati posisi awal, tengah maupun akhir sebuah kata. Terdapat 23 buah aksara ngalagena, yakni:</string>
+    <string name="introText4">
+        Aksara ngalagena adalah sistem ortografi yang melambangkan bunyi fonem konsonan dan berperan sebagai suku kata maupun kata yang bisa menempati posisi awal, tengah maupun akhir sebuah kata.
+        \nTerdapat 23 buah aksara ngalagena, yakni:
+    </string>
     <string name="introSubtitle4">Rarangkén</string>
-    <string name="introText5">Rarangkén adalah penanda bunyi yang berfungsi untuk mengubah, menambah, maupun menghilangkan bunyi pada aksara Sunda. Terdapat 3 jenis rarangkén, yakni:</string>
-    <string name="dummyIntroText5">Rarangkén adalah penanda bunyi yang berfungsi untuk mengubah, menambah, maupun menghilangkan bunyi pada aksara Sunda.</string>
+    <string name="introText5">
+        Rarangkén adalah penanda bunyi yang berfungsi seperti harkat dalam aksara Arab untuk mengubah, menambah, maupun menghilangkan bunyi vokal “A”  pada aksara ngalagena.
+        \nTerdapat 13 bentuk ortografi rarangkén, yakni:
+    </string>
 
+    <!-- String for Database-->
+    <string name="email">Email</string>
+
+    <string name="action_sign_in_short">Register</string>
+
+    <string name="minimum_password">Password terlalu pendek, masukkan minimum 6 karakter!</string>
+
+    <string name="auth_failed">Autentikasi gagal, cek email dan password kembali!</string>
+
+    <string name="change_email">Ubah Email</string>
+
+    <string name="change_password">Ubah Password</string>
+
+    <string name="send_password_reset_email">Kirim email untuk reset Password</string>
+
+    <string name="remove_user">Hapus user</string>
+
+    <string name="new_pass">Password Baru</string>
+
+    <string name="title_activity_profile">Firebase</string>
+
+    <string name="title_activity_login">Sign in</string>
+
+    <string name="hint_email">Email</string>
+
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Nama</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Bukan member? Silakan registrasi di sini!</string>
+    <string name="btn_link_to_login">Sudah teregistrasi, masuk di sini!</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="btn_forgot_password">Lupa password?</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="btn_back"><![CDATA[<< Back]]></string>
+    <string name="hint_new_email">Email Baru</string>
+    <string name="btn_change">Ubah</string>
+    <string name="btn_send">Kirim</string>
+    <string name="btn_remove">Hapus</string>
+    <string name="btn_sign_out">Sign Out</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+    <string name="lbl_forgot_password">Lupa password?</string>
+    <string name="forgot_password_msg">Kami hanya perlu email yang teregistrasi untuk mengirim anda instruksi untuk mereset password.</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
     <string-array name="swara" translateable="false">
         <item>a</item>
         <item>é</item>
@@ -45,7 +111,15 @@
         <item>e</item>
         <item>eu</item>
     </string-array>
-
+    <string-array name="swaraAksara" translateable="false">
+        <item>ᮃ</item>
+        <item>ᮄ</item>
+        <item>ᮅ</item>
+        <item>ᮆ</item>
+        <item>ᮇ</item>
+        <item>ᮈ</item>
+        <item>ᮉ</item>
+    </string-array>
     <string-array name="ngalagena">
         <item>ka</item>
         <item>ga</item>
@@ -71,7 +145,62 @@
         <item>xa</item>
         <item>za</item>
     </string-array>
+    <string-array name="ngalagenaAksara">
+        <item>ᮊ</item>
+        <item>ᮌ</item>
+        <item>ᮍ</item>
+        <item>ᮎ</item>
+        <item>ᮏ</item>
+        <item>ᮑ</item>
+        <item>ᮒ</item>
+        <item>ᮓ</item>
+        <item>ᮔ</item>
+        <item>ᮕ</item>
+        <item>ᮘ</item>
+        <item>ᮙ</item>
+        <item>ᮚ</item>
+        <item>ᮛ</item>
+        <item>ᮜ</item>
+        <item>ᮝ</item>
+        <item>ᮞ</item>
+        <item>ᮠ</item>
+        <item>ᮖ</item>
+        <item>ᮋ</item>
+        <item>ᮗ</item>
+        <item>ᮟ</item>
+        <item>ᮐ</item>
+    </string-array>
+    <string-array name="rarangken">
+        <item>ki</item>
+        <item>ku</item>
+        <item>ké</item>
+        <item>ko</item>
+        <item>ke</item>
+        <item>keu</item>
+        <item>kar</item>
+        <item>kang</item>
+        <item>kah</item>
+        <item>kya</item>
+        <item>kla</item>
+        <item>kra</item>
+        <item>k</item>
+    </string-array>
 
+    <string-array name="rarangkenAksara">
+        <item>ᮊ</item>
+        <item>ᮊ</item>
+        <item>ᮊᮦ</item>
+        <item>ᮊᮧ</item>
+        <item>ᮊ</item>
+        <item>ᮊᮩ</item>
+        <item>ᮊᮁ</item>
+        <item>ᮊᮀ</item>
+        <item>ᮊᮂ</item>
+        <item>ᮊᮡ</item>
+        <item>ᮊᮣ</item>
+        <item>ᮊ</item>
+        <item>ᮊ᮪</item>
+    </string-array>
     <string-array name="aksaraLesson1">
         <item>Di pelajaran ini, kita akan belajar 7 aksara swara, yakni "a", "é", "i", "o", "u", "e", "eu".</item>
         <item>Di pelajaran ini, kita akan belajar 3 aksara ngalagena, yakni "Ka", "Ga", dan "Nga".</item>
@@ -82,17 +211,21 @@
         <item>Di pelajaran ini, kita akan belajar 3 aksara ngalagena, yakni "Wa", "Sa", dan "Ha".</item>
         <item>Di pelajaran ini, kita akan belajar 5 aksara ngalagena, yakni "Fa", "Qa", "Va", "Xa", dan "Za".</item>
     </string-array>
-
     <string-array name="aksaraLesson2">
         <item>Dalam ejaan bahasa Sunda, é, e, dan eu memiliki pengucapan yang berbeda-beda.
-            \nPengucapan "é" caranya dengan menarik pipi sehingga bibir seperti tersenyum.
-            \nPengucapan "e" (pepet) sama dengan pengucapan vokal "e" (pepet) pada kata-kata Bahasa Indonesia.
+            \nPengucapan "é" (taling) caranya dengan menarik pipi sehingga bibir seperti tersenyum.
+            \nPengucapan "e" (pepet) sama dengan pengucapan vokal "e" (pepet) pada kata-kata bahasa Indonesia.
             \nPengucapan "eu" caranya dengan kepala agak didongakkan ke atas, seperti kita hendak sendawa.
-            \nCoba dengarkanlah suara pengucapannya masing-masing agar terlihat perbedaannya.</item>
-        <item>Sebenarnya, aksara Sunda Ka, Ga, dan Nga adalah bentuk vokalisasi dari konsonan "k", "g", dan "ng".
-            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "ka", "ge", dan "eng"</item>
-        <item>Sebenarnya, aksara Sunda Ca, Ja, dan Nya adalah bentuk vokalisasi dari konsonan "c", "j", dan "ny".
-            \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "ce", "je", dan "nye"</item>
+            \nCoba dengarkanlah suara pengucapannya masing-masing agar terlihat perbedaannya.
+        </item>
+        <item>
+            Sebenarnya, aksara Sunda Ka, Ga, dan Nga merupakan bentuk konsonan yang mirip dengan huruf Latin: "k", "g", dan "ng".
+            \nDalam ejaan bahasa Indonesia, ketiga huruf tersebut masing-masing dibaca "ka", "ge", dan "eng".
+        </item>
+        <item>
+            Sebenarnya, aksara Sunda Ca, Ja, dan Nya adalah merupakan bentuk konsonan yang mirip dengan huruf Latin:  "c", "j", dan "ny".
+            \nDalam ejaan bahasa Indonesia, ketiga huruf tersebut masing-masing dibaca "ce", "je", dan "eny".
+        </item>
         <item>Sebenarnya, aksara Sunda Ta, Da, dan Na adalah bentuk vokalisasi dari konsonan "t", "d", dan "n".
             \nHal ini mirip seperti vokalisasi konsonan dalam bahasa Indonesia seperti "te", "de", dan "en"</item>
         <item>Sebenarnya, aksara Sunda Pa, Ba, dan Ma adalah bentuk vokalisasi dari konsonan "p", "b", dan "m".
@@ -106,7 +239,6 @@
             \nLima aksara Sunda tersebut merupakan aksara Ngalagena dari bunyi serapan.
             \nLambang aksara fa dan va merupakan varian lambang aksara pa; lambang aksara qa dan xa adalah varian lambang aksara ka; lambang aksara za adalah varian lambang aksara ja.</item>
     </string-array>
-
     <string-array name="shortdesc">
         <item>"a" seperti di "aku"</item>
         <item>"é" seperti di "es"</item>
@@ -114,7 +246,7 @@
         <item>"o" seperti di "orang"</item>
         <item>"u" seperti di "ujian"</item>
         <item>"e" seperti di "entah"</item>
-        <item>Bahasa Indonesia tidak mengenal vokal "eu"</item>
+        <item>"eu" dalam Bahasa Indonesia tidak mengenal vokal "eu"</item>
         <item>"ka" seperti di "kasihan"</item>
         <item>"ga" seperti di "ganti"</item>
         <item>"nga" seperti di "menganga"</item>
@@ -139,14 +271,79 @@
         <item>"xa" seperti di "xa"</item>
         <item>"za" seperti di "za"</item>
     </string-array>
-    <string name="title_activity_login">Sign in</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string-array name="category">
+        <item>Basic11</item>
+        <item>Basic12</item>
+        <item>Basic21</item>
+        <item>Basic22</item>
+        <item>Hewan1</item>
+        <item>Hewan2</item>
+        <item>Warna1</item>
+        <item>Warna2</item>
+        <item>Angka1</item>
+        <item>Angka2</item>
+    </string-array>
+    <string-array name="categoryDisplay">
+        <item>Pelajaran Dasar 1 bagian 1</item>
+        <item>Pelajaran Dasar 1 bagian 2</item>
+        <item>Pelajaran Dasar 2 bagian 1</item>
+        <item>Pelajaran Dasar 2 bagian 2</item>
+        <item>Pelajaran Hewan 1</item>
+        <item>Pelajaran Hewan 2</item>
+        <item>Pelajaran Warna 1</item>
+        <item>Pelajaran Warna 2</item>
+        <item>Pelajaran Angka 1</item>
+        <item>Pelajaran Angka 2</item>
+    </string-array>
+    <string-array name="learningTipsTitle">
+        <item>Dasar 1</item>
+        <item>Dasar 2</item>
+        <item>Hewan</item>
+        <item>Warna</item>
+    </string-array>
+    <string-array name="learningTipsContent">
+        <item>
+            \nSifat atau karakter aksara Sunda berbeda dengan aksara Latin. Aksara Sunda bersifat silabis, sedangkan aksara Latin bersifat fonetis. Perbedaan ini sangat tampak pada bagian aksara ngalagena (konsonan).
+            \nUntuk melihat sistem ortografi aksara Sunda, silakan cek di menu aksara.
+        </item>
+        <item>
+            \nSecara struktur, bahasa Sunda dengan bahasa Indonesia memiliki tingkat kemiripan yang tinggi.
+            \nKalimat sederhana sama-sama mengikuti urutan subjek-predikat-objek.
+            \nSunda: Abdi neda goréng sangu.
+            \nIndonesia: Saya makan nasi goreng.
+        </item>
+        <item>
+            \nDalam penamaan hewan, tidak sedikit terdapat kesamaan antara bahasa Indonesia dengan bahasa Sunda.
+            \nBeberapa di antaranya adalah:
+            \nSapi, belut, kuda, monyet, jangkrik, cacing, gajah, singa
+            \n\nSedangkan pengertian hewan-hewan yang lainnya, di antaranya:
+            \nSunda ---> Indonesia
+            \nHayam ---> Ayam
+            \nEntog ---> Itik
+            \nManuk ---> Burung
+            \nReungit ---> Nyamuk
+            \nSireum ---> Semut
+            \nBangkong ---> Kodok
+            \nOray ---> Ular
+            \nJapati ---> Merpati
+            \nMaung ---> Harimau
+            \nKalong ---> Kelelawar
+            \nBeurit ---> Tikus
+            \nKuya ---> Kura-kura
+        </item>
+        <item>
+            \nDalam penamaan warna, terdapat kesamaan antara bahasa Indonesia dengan bahasa Sunda.
+            \nYakni: biru dan coklat
+            \n\nSedangkan pengertian warna-warna yang lainnya, di antaranya:
+            \nBeureum = Merah
+            \nBungur, Gandaria = Ungu
+            \nBodas = Putih
+            \nHejo = Hijau
+            \nHideung = Hitam
+            \nKoneng = Kuning
+            \nKayas = Merah muda atau Ping
+            \nKulawu = abu-abu
+        </item>
+    </string-array>
 
 </resources>

@@ -19,7 +19,7 @@
             android:layout_height="150dp"
             android:layout_marginTop="16dp"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/palamacan" />
+            app:srcCompat="@drawable/main_logo_big" />
 
         <Button
             android:id="@+id/intro"
@@ -32,7 +32,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Aksara (Apa itu Aksara?)"
+            android:text="Aksara Sunda\n(Apa itu Aksara Sunda?)"
             android:textSize="15sp"
             android:textAllCaps="false"/>
 
@@ -47,7 +47,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Lesson 1 \nswara a, é, i, o, u, e, eu"
+            android:text="Pelajaran 1 \nSwara a, é, i, o, u, e, eu"
             android:textSize="15sp"
             android:textAllCaps="false" />
 
@@ -62,7 +62,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Lesson 2 \nKaganga ka, ga, nga"
+            android:text="Pelajaran 2 \nKaganga ka, ga, nga"
             android:textSize="15sp"
             android:textAllCaps="false" />
 
@@ -77,7 +77,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Lesson 3 \nKaganga ca, ja, nya"
+            android:text="Pelajaran 3 \nKaganga ca, ja, nya"
             android:textSize="15sp"
             android:textAllCaps="false" />
 
@@ -92,7 +92,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Lesson 4 \nKaganga ta, da, na"
+            android:text="Pelajaran 4 \nKaganga ta, da, na"
             android:textSize="15sp"
             android:textAllCaps="false" />
 
@@ -107,7 +107,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Lesson 5 \nKaganga pa, ba, ma"
+            android:text="Pelajaran 5 \nKaganga pa, ba, ma"
             android:textSize="15sp"
             android:textAllCaps="false" />
 
@@ -122,7 +122,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Lesson 6 \nKaganga ya, ra, la"
+            android:text="Pelajaran 6 \nKaganga ya, ra, la"
             android:textSize="15sp"
             android:textAllCaps="false" />
 
@@ -137,7 +137,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Lesson 7 \nKaganga wa, sa, ha"
+            android:text="Pelajaran 7 \nKaganga wa, sa, ha"
             android:textSize="15sp"
             android:textAllCaps="false" />
 
@@ -152,7 +152,7 @@
             android:layout_marginEnd="20dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
-            android:text="Lesson 8 \nKaganga fa, qa, va, xa, za"
+            android:text="Pelajaran 8 \nKaganga fa, qa, va, xa, za"
             android:textSize="15sp"
             android:textAllCaps="false" />
 
